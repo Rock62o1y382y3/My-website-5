@@ -1,0 +1,29 @@
+/* Update for navbar to make it cool */
+nav {
+    background-color: #00ff88;
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo h1 {
+    color: #000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav

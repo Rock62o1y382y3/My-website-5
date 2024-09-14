@@ -1,8 +1,21 @@
-/* Update for navbar to make it cool */
+/* Reset and Basics */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #101f33; /* Cool blue background */
+    color: #fff;
+    font-size: 18px;
+}
+
+/* Cool Navbar with Sliding Menu */
 nav {
-    background-color: #00ff88;
+    background-color: #0077ff; /* Blue navbar */
     padding: 15px;
-    text-align: center;
     position: fixed;
     width: 100%;
     top: 0;
@@ -13,7 +26,9 @@ nav {
 }
 
 nav .logo h1 {
-    color: #000;
+    color: #ffffff;
+    font-size: 1.5em;
+    margin-left: 20px;
 }
 
 nav ul {
@@ -26,4 +41,93 @@ nav ul li {
     margin: 0 20px;
 }
 
-nav
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #b3d1ff; /* Lighter blue on hover */
+}
+
+/* Sliding Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    font-size: 1.8em;
+    color: #ffffff;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #0077ff;
+        width: 100%;
+        text-align: center;
+        transition: transform 0.5s ease;
+        transform: translateX(100%);
+    }
+
+    nav ul.active {
+        transform: translateX(0);
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+}
+
+/* Home Section with Cool Background */
+.home-background {
+    background: url('images/home-background.jpg') no-repeat center center/cover; /* Add cool background image */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.home-background h1 {
+    font-size: 3.5em;
+    color: #ffffff;
+}
+
+.home-background p {
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+.button {
+    background-color: #0077ff;
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #005bb5;
+}
+
+/* Footer */
+footer {
+    background-color: #002244;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer p {
+    color: #ffffff;
+}
